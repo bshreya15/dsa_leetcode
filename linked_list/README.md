@@ -20,3 +20,24 @@ Constraints:
 
 The number of nodes in the list is in the range [1, 5 * 104].
 1 <= Node.val <= 1000
+
+
+<h2>leet143_reorder_list: </h2>
+<href>https://github.com/bshreya15/dsa_python/blob/main/linked_list/leet206_reverse_list.py</href>
+
+Given the head of a singly linked list, reverse the list, and return the reversed list.
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
+
+Input: head = [1,2]
+Output: [2,1]
+Example 3:
+
+Input: head = []
+Output: []
+ 
+
+Constraints:
+
+The number of nodes in the list is the range [0, 5000].
+-5000 <= Node.val <= 5000
