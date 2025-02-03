@@ -4,13 +4,13 @@ class Solution:
         r = 1
         maxP = 0
 
-        for right in range(len(prices)-1):
+        while r < len(prices):
             if prices[l] < prices[r]:
                 profit = prices[r] - prices[l]
                 maxP = max(maxP,profit)
 
             else:
-                l= r
+                l = r
             r += 1
         return maxP
         
