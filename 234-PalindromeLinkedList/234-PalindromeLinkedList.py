@@ -7,11 +7,11 @@ class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
         if not head or not head.next:
             return True
-
+        
         slow = head
         fast = head.next
 
-        while fast and fast.next:
+        while (fast and fast.next):
             slow = slow.next
             fast = fast.next.next
         
@@ -20,19 +20,18 @@ class Solution:
         prev = None
 
         while second:
-            temp = second.next
+            nxt = second.next
             second.next = prev
             prev = second
-            second = temp
+            second = nxt
         
-        left = head
-        right = prev
+        first = head
+        second = prev
 
-        while right:
-            if left.val != right.val:
+        while second:
+            if first.val != second.val:
                 return False
-            left = left.next
-            right = right.next
-        
+
+            first = first.next
+            second = second.next
         return True
-        
