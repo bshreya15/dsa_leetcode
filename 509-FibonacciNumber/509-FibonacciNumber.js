@@ -1,12 +1,26 @@
-// Last updated: 6/2/2025, 8:58:23 PM
+// Last updated: 6/2/2025, 9:24:30 PM
 /**
- * @param {number} n
- * @return {number}
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
  */
-var fib = function(n) {
-    if (n===0 || n===1) return n;
+var isAnagram = function(s, t) {
 
-    if (n>1){
-        return fib(n-1) + fib(n-2);
+    //return s.split("").sort().join("") === t.split("").sort().join("")
+
+    if (s.length !== t.length) return false;
+    
+    let sObj = {};
+    let tObj = {};
+
+    for(let i=0 ; i < s.length; i++){
+        sObj[s[i]] = (sObj[s[i]] || 0) + 1;
+        tObj[t[i]] = (tObj[t[i]] || 0) + 1; 
     }
+
+    for(const key in sObj){
+        if(sObj[key] !== tObj[key]) return false;
+    }
+
+    return true;
 };
