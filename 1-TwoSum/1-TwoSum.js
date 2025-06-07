@@ -1,14 +1,11 @@
-// Last updated: 6/7/2025, 12:04:46 PM
+// Last updated: 6/7/2025, 12:07:49 PM
 /**
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-    let left = 0;
-    let right = 1;
-
-    let resArr = [];
+   let resArr = [];
 
     for(let left = 0 ; left <nums.length ; left++){
         for(let right = 1 ; right <  nums.length ; right++){
